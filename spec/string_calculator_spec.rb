@@ -11,5 +11,9 @@ describe StringCalculator do
       it 'returns the same number for a single number' do
         expect(subject.add('5')).to eq(5)
       end
+
+      it 'returns the sum of two numbers' do
+        expect(subject.add('5,2')).to eq(7)
+      end
     end
   end
