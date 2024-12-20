@@ -1,5 +1,8 @@
 class StringCalculator
     def add(numbers)
+      if numbers.include?("\n")
+        numbers = numbers.gsub("\n", ',') 
+      end
       if numbers.empty? 
         0
       else

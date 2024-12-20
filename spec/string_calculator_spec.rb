@@ -19,5 +19,9 @@ describe StringCalculator do
       it 'returns the sum of any numbers' do
         expect(subject.add('1,2,3,6')).to eq(12)
       end
+
+      it 'returns sum when newlines between numbers are present' do
+        expect(subject.add("1\n2\n3,4")).to eq(10)
+      end
     end
   end
