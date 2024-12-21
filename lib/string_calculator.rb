@@ -13,7 +13,7 @@ class StringCalculator
     numbers = numbers.gsub(/[^-\d#{del}]/, '')
     negatives = numbers.split(del).select { |n| n.to_i < 0 }
     unless negatives.empty?
-      raise ArgumentError, "Negative numbers not allowed"
+      raise ArgumentError, "Negative numbers not allowed: #{negatives.join(', ')}" 
     end
     numbers.split(del).map(&:to_i).sum
   end
