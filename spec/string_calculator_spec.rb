@@ -23,5 +23,9 @@ describe StringCalculator do
       it 'returns sum when newlines between numbers are present' do
         expect(subject.add("1\n2\n3,4")).to eq(10)
       end
+
+      it 'returns sum when custom delimiters are present' do
+        expect(subject.add('//;\n1;2')).to eq(3)
+      end
     end
   end
